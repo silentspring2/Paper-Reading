@@ -1,0 +1,37 @@
+\documentclass[11pt]{scrartcl}
+\usepackage{amsfonts}
+\usepackage[top=1cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+%opening
+\title{Week 6 Paper Reading}
+\author{Fuyuan Lyu}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+
+\end{abstract}
+
+
+\section{Deep Learning based Recommender System: A Survey and New Perspectives}
+
+In this paper\cite{zhang2019deep}, the authors present a clear way to taxonomize and view deep learning based recommender system. 
+
+\subsection{Formulation of recommender system}
+The core problem of recommender system is to \textit{estimate users' perference on items and recommend items that users might like to them proactively} \cite{zhang2019deep}. Suppose we have $M$ users and $N$ items. $R$ and $R^{}$ denotes the real and predicted interaction matrix. Let $r_{ui}$ and $r_{ui}^{'}$ denote the real and predicted preference of user $u$ to item $i$. We use partially observed vector(rows of $R$) $r^{(u)} = \{r_{u1}, r_{u2}, ..., r_{uN}\}$ to represent user $u$ and partially observed vector (columns of $R$) $r^{(i)} = \{ r_{1i}, r_{2i}, ..., r_{Mi} \}$ to represent item $i$. We user $O$ and $O^{-}$ to denote the observed and unobserved interaction set. we use $U \in \mathbb{R}^{M \times k}$ and $V \in \mathbb{R}^{N \times k}$ to denote user and item latent factor. $k$ is the dimension of latent factor.
+
+
+\subsubsection{3 kinds of recommender system}
+Currently, people classify recommender system into three categories: 
+\begin{itemize}
+	\item collaborative filtering, which makes recommendation by learning from user-item historical interactions, either explicit(e.g. users' previous rating) or implicit feedback(e.g. browsing history).
+	\item content-based recommender system, which makes recommendation based on comparing users' and items' auxiliary information(e.g. texts, images, videos)
+	\item hybrid recommender system, which combines the two methods mentioned above.
+\end{itemize}
+
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+\end{document}
